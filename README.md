@@ -40,7 +40,7 @@ Clone this project repository:
 git clone https://github.com/PARC-Robotics/PARC2025-Engineers-League-Phase2.git
 ```
 
-## Commands to enable display on your 
+## Commands to enable GUI use on your PC
 
 To be able to use a graphical user interface (GUI), like `RViz`, on your host machine when you run `RViz` in the container, execute the following commands on your host machine NOT in the container:
 
