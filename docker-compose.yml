@@ -1,0 +1,15 @@
+services:
+  parc2025-humble:
+    container_name: parc2025-humble
+    image: "thenoobinventor/parc2025-humble:latest"
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/home/noobmsi/parc2025_humble/src:/home/ros/ros2_ws/src" # Change username
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+    stdin_open: true
+    tty: true
+    network_mode: "host"
+    ipc: "host"
+    privileged: true
