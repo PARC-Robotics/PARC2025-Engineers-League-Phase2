@@ -75,10 +75,10 @@ docker attach parc2025-humble
 ## Play a recorded rosbag
 The data from the rosbag can be used to build a map, for this instance of autonomous navigation, to develop and test algorithms with the offline data and more.
 
-To play back any recorded rosbag, run this command:
+To play back any recorded rosbag, run this command (the rosbag is named `rosbag2025` in this case):
 
 ```
-ros2 bag play <name_of_rosbag>
+ros2 bag play rosbag2025
 ```
 
 As the rosbag is playing, you can echo the topic data being published. For instance, to echo the `/imu` data, simply execute:
@@ -89,7 +89,6 @@ ros2 topic echo /imu
 
 The rosbag data can be visualized in `RViz`. Execute the `rviz2` command in a terminal window. Under **Global Options** set the fixed frame to `base_link` then add the
 data you want to visualize. The following screenshot shows the lidar and camera data.
-
 
 <p align="center">
   <img title='rviz rosbag playback' src=rviz_rosbag.png width="800">
