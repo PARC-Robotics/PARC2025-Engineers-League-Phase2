@@ -1,5 +1,5 @@
 # PARC2025-Engineers-League-Phase2
-This repository provides information how to setup the docker container to be used in the real world phase of the PARC 2025 Engineers League competition in Senegal.
+This repository provides information how to setup the docker container to be used in the real world phase (phase 2) of the PARC 2025 Engineers League competition in Senegal. Information on how to play recorded rosbags are also shown.
 
 ## Download Docker
 
@@ -40,7 +40,7 @@ Clone this project repository:
 git clone https://github.com/PARC-Robotics/PARC2025-Engineers-League-Phase2.git
 ```
 
-## Commands to enable GUI use on your PC
+## Commands to enable display on your 
 
 To be able to use a graphical user interface (GUI), like `RViz`, on your host machine when you run `RViz` in the container, execute the following commands on your host machine NOT in the container:
 
@@ -70,4 +70,27 @@ Attach to the created container with this command:
 
 ```
 docker attach parc2025-humble
-````
+```
+
+## Play a recorded rosbag
+The data from the rosbag can be used to build a map, for this instance of autonomous navigation, to develop and test algorithms with the offline data and more.
+
+To play back any recorded rosbag, run this command:
+
+```
+ros2 bag play <name_of_rosbag>
+```
+
+As the rosbag is playing, you can echo the topic data being published. For instance, to echo the `/imu` data, simply execute:
+
+```
+ros2 topic echo /imu
+```
+
+The rosbag data can be visualized in `RViz`. Execute the `rviz2` command in a terminal window. Under **Global Options** set the fixed frame to `base_link` then add the
+data you want to visualize. The following screenshot shows the lidar and camera data.
+
+
+<p align="center">
+  <img title='rviz rosbag playback' src=rviz_rosbag.png width="800">
+</p>
