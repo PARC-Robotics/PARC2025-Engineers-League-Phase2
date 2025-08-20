@@ -26,7 +26,7 @@ docker run hello-world
 
 ## Pull Docker Image
 
-The Docker image used is based on Ubuntu 22.04 which will uses the Humble version of ROS2. Pull the image from Docker hub with this command:
+The Docker image used is based on Ubuntu 22.04 which will use the Humble version of ROS2. Pull the image from Docker hub with this command:
 
 ```
 docker pull thenoobinventor/parc2025-humble:latest
